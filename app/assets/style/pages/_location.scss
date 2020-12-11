@@ -1,0 +1,147 @@
+//banner
+.location-banner{
+    background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/qa.png?raw=true) no-repeat center center / cover;
+    height: 304px;
+    @include pad{
+        background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/qa.png?raw=true);
+        background-repeat: no-repeat;
+        background-position: 35% 50%;
+        background-size: cover;
+    }
+    @include mobile{
+        height: 143px;
+        background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/qa.png?raw=true);
+        background-repeat: no-repeat;
+        background-position: 35% 50%;
+        background-size: cover;
+    }
+    .fz-64{
+        @include pad{
+            font-size: 48px;
+        }
+        @include mobile{
+            font-size: 28px;
+        }
+    }
+    .location-banner_icon{
+        @include size(58px, 58px);
+        margin-left: 24px;
+        @include pad{
+            @include size(48px, 48px);
+            margin-left: 16px;
+        }
+        @include mobile{
+            @include size(24px, 24px);
+            margin-left: 8px;
+        }
+    }
+}
+//location-list
+.location{
+    padding: 22px 0 272px;
+    @include pad{
+        padding: 8px 0 84px;
+    }
+    @include mobile{
+        padding: 8px 0 40px;
+    }
+    .select-area{
+        margin-bottom: 32px;
+        @include pad{
+            .fz-24{
+                font-size: 16px;
+            }
+            margin-bottom: 24px;
+        }
+        @include mobile{
+            .fz-24{
+                font-size: 14px;
+            }
+            margin-bottom: 20px;
+        }
+        .custom-select{
+            width: 324px;
+            margin-left: 20px;
+            padding: 10px;
+            font-size: 18px;
+            @include pad{
+                width: 237px;
+                font-size: 16px;
+                padding: 12px 16px;
+            }
+            @include mobile{
+                width: 277px;
+                font-size: 14px;
+                padding: 8px 16px;
+                margin-left: 12px;
+            }
+        }
+    }
+}
+.location-list{
+    @include pad{
+        justify-content: space-between;
+    }
+    &_item{
+        width: 350px;
+        margin-bottom: 32px;
+        &:nth-child(2), &:nth-child(5){
+            margin: 0 30px;
+        }
+        @include pad{
+            width: 330px;
+            margin-bottom: 20px;
+            &:nth-child(2), &:nth-child(5){
+                margin: initial;
+            }
+        }
+    }
+    &_img{
+        @include size(350px, 224px);
+        @include pad{
+            @include size(330px, 164px);
+        }
+    }
+    &_title{
+        padding: 12px 24px;
+        border: 1px solid #00000020;
+        @include pad{
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+    }
+    &_info{
+        padding: 16px 24px;
+        border: 1px solid #00000020;
+        &-item{
+            margin-bottom: 8px;
+            img{
+                @include size(21px, 21px);
+            }
+            p{
+                margin-left: 12px;
+                font-size: 20px;
+            }
+        }
+        @include pad{
+            padding: 16px;
+            img{
+                @include size(20px, 20px);
+            }
+            p{
+                margin-left: 16px;
+                font-size: 14px;
+            }
+        }
+    }
+    &_detail-btn{
+        font-size: 19px;
+        text-align: center;
+        padding: 20px 137px;
+        background-color: #000;
+        @include pad{
+            font-size: 14px;
+            padding: 16px 137px;
+        }
+    }
+}
